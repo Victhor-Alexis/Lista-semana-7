@@ -1,0 +1,183 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav .nav-top {
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+}
+
+nav .nav-top a {
+    color: black
+}
+
+nav .nav-top a:hover {
+    text-decoration: underline 2px;
+}
+
+nav .nav-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 2.5rem;
+    color: white;
+}
+
+nav .nav-bottom a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+nav .nav-left {
+    margin-top: -1.5rem;
+}
+
+nav .nav-middle {
+    margin-left: 7rem;
+}
+
+.menu-mobile {
+    display: none;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    width: 100px;
+    text-align: center;
+}
+
+nav .menu-mobile a {
+    color: black;
+    margin: 0;
+    position: relative;
+    top: 10px;
+}
+
+.page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;  
+    text-align: center;
+    color: white;
+}
+
+.page .content {
+    padding: 0 6%;
+}
+
+.page .top {
+    margin-top: 12rem;
+    max-width: 680px;
+}
+
+.page .top h2 {
+    margin: 5rem  0;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.page button{
+    width: 200px;
+    padding: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.page button:first-of-type {
+    border: 2px solid white;
+    background: none;
+    color: white;
+}
+
+.page button:last-of-type {
+    background-color: white;
+    border: none;
+}
+
+#page_1 {
+    background-color: #FF5757;
+}
+
+#page_2 {
+    background-color: dodgerblue; 
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    height: fit-content;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 1024px) {
+    .menu-mobile {
+        display: inline-block;
+    }
+
+    nav .nav-middle, 
+    nav .nav-right {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .page button {
+        margin: 0.5rem 0;
+        width: 80%;
+        min-width: 250px;
+    }
+
+    .page .top h2 {
+        margin: 3rem 0;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer a{
+        margin: 8px 0;
+    }
+
+    #page_2 {
+        height: auto;
+    }
+
+    #page_2 .bottom {
+        margin-bottom: 14rem;
+    }
+}
